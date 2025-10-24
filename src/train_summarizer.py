@@ -8,7 +8,7 @@ from transformers import (
 from config import *
 from data_ingestion import load_data, split_data
 
-dataset = load_data()
+dataset = load_data(DATASET_NAME)
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
@@ -44,5 +44,3 @@ trainer = Trainer(
 )
 
 
-trainer.train()
-trainer.push_to_hub()
