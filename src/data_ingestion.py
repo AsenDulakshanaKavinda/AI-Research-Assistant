@@ -3,7 +3,7 @@ from transformers import AutoTokenizer
 from config  import *
 
 def load_data(dataset_name: str):
-    dataset = load_data(dataset_name)
+    dataset = load_dataset(dataset_name)
     return dataset
 
 def split_data(dataset):
